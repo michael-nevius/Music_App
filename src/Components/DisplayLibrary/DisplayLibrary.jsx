@@ -3,7 +3,7 @@ import './DisplayLibrary.css';
 
 const DisplayLibrary = (props) => {
     return (
-        <table class="table table-boardered">
+        <table className="table table-boardered">
             <thead>
                 <tr>
                     <th scope='col'>#</th>
