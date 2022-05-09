@@ -1,15 +1,18 @@
+import './DisplayLibrary.css';
+
 
 const DisplayLibrary = (props) => {
     return (
-        <table className="table">
+        <table class="table table-boardered">
             <thead>
                 <tr>
-                    <th>Title</th>
-                    <th>Artist</th>
-                    <th>Album</th>
-                    <th>Release Date</th>
-                    <th>Genre</th>
-                    <th>Likes</th>
+                    <th scope='col'>#</th>
+                    <th scope='col'>Title</th>
+                    <th scope='col'>Artist</th>
+                    <th scope='col'>Album</th>
+                    <th scope='col'>Release Date</th>
+                    <th scope='col'>Genre</th>
+                    <th scope='col'>Likes</th>
                 </tr>
             </thead>
             <tbody>
