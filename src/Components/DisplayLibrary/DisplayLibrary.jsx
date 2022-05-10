@@ -6,7 +6,7 @@ const DisplayLibrary = (props) => {
     return (
         <div>
             <h3>MUSIC LIBRARY</h3>
-        <table className="table">
+            <table className="table">
             <thead>
                 <tr>
                     <th scope='col'>#</th>
@@ -15,6 +15,7 @@ const DisplayLibrary = (props) => {
                     <th scope='col'>Album</th>
                     <th scope='col'>Release Date</th>
                     <th scope='col'>Genre</th>
+                    <th scope='col'>Likes</th>
                 </tr>
             </thead>
             <tbody>
@@ -27,6 +28,9 @@ const DisplayLibrary = (props) => {
                             <td>{music.album}</td>
                             <td>{music.release_date}</td>
                             <td>{music.genre}</td>
+                            <td>{music.likes}</td>
+                            <td><button onClick={() => props.likeSong(music.id)}>Like</button></td>
+                            <td><button onClick={() => props.deleteSong(music.id)}> Delete Song</button></td>
                         </tr>
                     )
                 })}
