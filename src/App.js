@@ -3,6 +3,7 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import DisplayLibrary from './Components/DisplayLibrary/DisplayLibrary';
 import AddMusic from './Components/AddMusic/AddMusic'
+import NavBar from './Components/NavBar/NavBar';
 
 function App() {
   const [music, setMusic] = useState([]);
@@ -25,6 +26,9 @@ function App() {
   }
   return (
     <div className='Music Library'>
+      <div>
+        <NavBar />
+      </div>
       <div >
         <DisplayLibrary parentMusic = {music}/>
       </div>
