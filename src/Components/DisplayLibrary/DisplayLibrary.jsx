@@ -1,4 +1,6 @@
 import './DisplayLibrary.css';
+import Buttons from './LikeButton'
+import React from 'react';
 
 
 const DisplayLibrary = (props) => {
@@ -14,7 +16,6 @@ const DisplayLibrary = (props) => {
                     <th scope='col'>Album</th>
                     <th scope='col'>Release Date</th>
                     <th scope='col'>Genre</th>
-                    <th scope='col'>Likes</th>
                 </tr>
             </thead>
             <tbody>
@@ -27,7 +28,7 @@ const DisplayLibrary = (props) => {
                             <td>{music.album}</td>
                             <td>{music.release_date}</td>
                             <td>{music.genre}</td>
-                            <td>{music.likes}</td>
+                            <Buttons/>
                         </tr>
                     )
                 })}
