@@ -4,6 +4,7 @@ import axios from 'axios';
 import DisplayLibrary from './Components/DisplayLibrary/DisplayLibrary';
 import AddMusic from './Components/AddMusic/AddMusic'
 import NavBar from './Components/NavBar/NavBar';
+import SearchBar from './Components/SearchBar/SearchBar';
 
 function App() {
   const [music, setMusic] = useState([]);
@@ -24,10 +25,19 @@ function App() {
       await getAllMusic();
     }
   }
+
+  async function filterMusic(category, filterData) {
+    let response = await axios.get(`http://127.0.0.1:8000/api/music?${category}=${filterData}`);
+    setMusic(response.data);
+    
+  }
   return (
     <div className='Music Library'>
       <div>
         <NavBar />
+      </div>
+      <div>
+        <SearchBar filterMusic={filterMusic} music={music}/>
       </div>
       <div >
         <DisplayLibrary parentMusic = {music}/>

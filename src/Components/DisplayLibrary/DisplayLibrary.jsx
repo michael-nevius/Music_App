@@ -3,7 +3,9 @@ import './DisplayLibrary.css';
 
 const DisplayLibrary = (props) => {
     return (
-        <table className="table table-boardered">
+        <div>
+            <h3>MUSIC LIBRARY</h3>
+        <table className="table">
             <thead>
                 <tr>
                     <th scope='col'>#</th>
@@ -19,7 +21,7 @@ const DisplayLibrary = (props) => {
                 {props.parentMusic.map((music, element) => {
                     return(
                         <tr key={element}>
-                            <td>{music.id}</td>
+                            <td>{element +1}</td>
                             <td>{music.title}</td>
                             <td>{music.artist}</td>
                             <td>{music.album}</td>
@@ -31,6 +33,7 @@ const DisplayLibrary = (props) => {
                 })}
             </tbody>
         </table>
+    </div>
     )
 }
 
