@@ -1,5 +1,4 @@
 import './DisplayLibrary.css';
-import Buttons from './LikeButton'
 import React from 'react';
 
 
@@ -28,7 +27,6 @@ const DisplayLibrary = (props) => {
                             <td>{music.album}</td>
                             <td>{music.release_date}</td>
                             <td>{music.genre}</td>
-                            <Buttons/>
                         </tr>
                     )
                 })}
