@@ -6,8 +6,8 @@ const DisplayLibrary = (props) => {
 
       
     return ( 
-        <div>
-            <table>
+        <div class='container-fluid'>
+            <table className='table'>
                 <thead>
                     <tr>
                     <th>#</th>    

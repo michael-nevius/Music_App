@@ -1,3 +1,16 @@
-
+.table_layout {
+    table-layout: fixed;
+  }
+  
+  .border_box{
+    border: 3px;
+    border-style: solid;
+    border-color: rgb(250, 3, 3);
+    margin: 2em;
+    padding: 2em;
+  }
+  .table2{
+    display: table-header-group;
+  }
 
 
